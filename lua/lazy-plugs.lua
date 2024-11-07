@@ -28,10 +28,12 @@ if not vim.loop.fs_stat(lazypath) then
   install_lazy()
 else
   require("lazy").setup({
+    -- TELESCOPE
     {
       'nvim-telescope/telescope.nvim', tag = '0.1.8',
       dependencies = { 'nvim-lua/plenary.nvim' }
     },
+    -- OIL
     {
       'stevearc/oil.nvim',
       ---@module 'oil'
@@ -39,6 +41,7 @@ else
       opts = {},
       dependencies = { { "echasnovski/mini.icons", opts = {} } },
     },
+    -- Which
     {
       "folke/which-key.nvim",
       event = "VeryLazy",
@@ -53,6 +56,16 @@ else
           desc = "Buffer Local Keymaps (which-key)",
         },
       },
-    }
+    },
+    -- Mason
+    {
+      'williamboman/mason.nvim',
+      lazy = false,
+    },
+    {
+      'williamboman/mason-lspconfig.nvim',
+      lazy = false,
+    },
+    { 'neovim/nvim-lspconfig' },
   })
 end

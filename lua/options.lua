@@ -39,7 +39,3 @@ vim.opt.wildignore:append("**/vendor/**")
 
 -- Use system clipboard by default
 vim.opt.clipboard = vim.fn.has('unnamedplus') == 1 and 'unnamedplus' or ''
-
--- Search highlight
-vim.opt.hlsearch = true
-vim.opt.incsearch = true

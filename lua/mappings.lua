@@ -10,8 +10,12 @@ vim.keymap.set('n', '<leader>b', builtin.buffers, { desc = 'Telescope buffers' }
 vim.keymap.set('n', '<leader> ', builtin.buffers, { desc = 'Telescope buffers' })
 vim.keymap.set('n', '<leader>t', builtin.help_tags, { desc = 'Telescope help tags' })
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Oil file viewer" })
-vim.keymap.set("n", "<leader>o", "<CMD>Oil<CR>", { desc = "Oil file viewer" })
 vim.keymap.set("n", "<tab>", "<C-^>", { desc = "Toggle previous buffer" })
+
+-- Plugs windows
+vim.keymap.set("n", "<leader>o", "<CMD>Oil<CR>", { desc = "Oil file viewer" })
+vim.keymap.set("n", "<leader>l", ":Lazy<CR>", { desc = "Lazy plugs" })
+vim.keymap.set("n", "<leader>m", ":Mason<CR>", { desc = "Mason ls" })
 
 -- Autocomplete: Tab o C-n
 function _G.TabOrComplete()
@@ -44,6 +48,3 @@ vim.keymap.set('i', '<C-s>', '<Esc>:w<CR>', { noremap = true })
 
 -- Enter to : (cmd mode)
 vim.keymap.set({'n', 'v'}, '<CR>', ':', { noremap = true })
-
--- Configuración del signo de columna
-vim.wo.signcolumn = "yes"  -- Siempre mostrar la columna de signos
