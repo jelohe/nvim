@@ -32,6 +32,11 @@ vim.opt.shiftwidth = 2
 -- Colors
 vim.opt.syntax = "enable"
 vim.opt.termguicolors = true
+if vim.opt.background:get() == "dark" then
+    vim.cmd("colorscheme yin")
+else
+    vim.cmd("colorscheme yang")
+end
 
 -- Folder & file ignores
 vim.opt.wildignore:append("**/node_modules/**")
@@ -39,3 +44,7 @@ vim.opt.wildignore:append("**/vendor/**")
 
 -- Use system clipboard by default
 vim.opt.clipboard = vim.fn.has('unnamedplus') == 1 and 'unnamedplus' or ''
+
+-- Remove hl search
+vim.opt.hlsearch = false
+vim.opt.incsearch = false

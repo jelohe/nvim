@@ -36,8 +36,6 @@ else
     -- OIL
     {
       'stevearc/oil.nvim',
-      ---@module 'oil'
-      ---@type oil.SetupOpts
       opts = {},
       dependencies = { { "echasnovski/mini.icons", opts = {} } },
     },
@@ -58,14 +56,12 @@ else
       },
     },
     -- Mason
-    {
-      'williamboman/mason.nvim',
-      lazy = false,
-    },
-    {
-      'williamboman/mason-lspconfig.nvim',
-      lazy = false,
-    },
-    { 'neovim/nvim-lspconfig' },
+    { 'williamboman/mason.nvim', lazy = false },
+    { 'williamboman/mason-lspconfig.nvim', lazy = false },
+    {'neovim/nvim-lspconfig'},
+    {'tpope/vim-surround'},
+    {'tpope/vim-surround'},
+    {'davidosomething/vim-colors-meh'},
+    {'pgdouyon/vim-yin-yang'},
   })
 end
